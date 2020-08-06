@@ -11,7 +11,7 @@
     "OverridePostUpdatePage": "",
 
     "Homepage": {
-      "URL": "file:///usr/share/postmarketos-config-firefox/home.html",
+      "URL": "file:///usr/share/mobile-config-firefox/home.html",
       "Locked": false,
       "StartPage": "homepage"
     },

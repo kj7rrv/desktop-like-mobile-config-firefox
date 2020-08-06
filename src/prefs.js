@@ -1,5 +1,3 @@
-/** Firefox tweaks for postmarketOS **/
-
 // Select a mobile user agent for firefox (same as tor browser on android)
 pref('general.useragent.override', 'Mozilla/5.0 (Android 6.0; Mobile; rv:68.0) Gecko/20100101 Firefox/68.0');
 

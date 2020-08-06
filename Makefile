@@ -1,4 +1,6 @@
 USERCHROME_FILES := root.css urlbar.css appMenu.css
+HOMEPAGE_FILES := head.html distro_links.html bottom.html
+DISTRO := postmarketOS
 
 all: out/home.html out/policies.json out/prefs.js out/userChrome.css
 
@@ -7,8 +9,10 @@ clean:
 out:
 	mkdir out
 
-out/home.html: src/home.html out
-	cat $< > $@
+out/home.html: src/homepage/*.html out
+	( cd src/homepage; cat $(HOMEPAGE_FILES) ) > $@.temp
+	sed "s/@DISTRO@/$(DISTRO)/g" "$@.temp" > "$@"
+	rm "$@.temp"
 
 out/policies.json: src/policies.json out
 	cat $< > $@
