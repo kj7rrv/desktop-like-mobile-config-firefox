@@ -1,3 +1,6 @@
+/* Copyright 2020 Oliver Smith
+   SPDX-License-Identifier: GPL-3.0-or-later */
+
 /* Reduce minimum window width */
 #urlbar-container {
   min-width: 150px !important;

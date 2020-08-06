@@ -1,3 +1,6 @@
+# Copyright 2020 Oliver Smith
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 USERCHROME_FILES := root.css urlbar.css appMenu.css
 HOMEPAGE_FILES := head.html distro_links.html bottom.html
 DISTRO := postmarketOS

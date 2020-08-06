@@ -1,4 +1,6 @@
 #!/bin/sh
+# Copyright 2020 Oliver Smith
+# SPDX-License-Identifier: GPL-3.0-or-later
 
 # Create chrome/userChrome.css symlink in a firefox profile dir
 # $1: path to profile dir, e.g. "/home/user/.mozilla/firefox/asdf.default"
