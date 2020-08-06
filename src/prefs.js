@@ -14,3 +14,6 @@ pref('browser.search.suggest.enabled', false);
 
 // Empty new tab page: faster, less distractions
 pref('browser.newtabpage.enabled', false);
+
+// Allow UI customizations with userChrome.css and userContent.css
+pref('toolkit.legacyUserProfileCustomizations.stylesheets', true);
