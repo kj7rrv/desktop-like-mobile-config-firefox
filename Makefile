@@ -18,7 +18,7 @@ out/home.html: src/homepage/*.html out
 	sed "s/@DISTRO@/$(DISTRO)/g" "$@.temp" > "$@"
 	rm "$@.temp"
 
-out/userChrome.css: out src/userChrome/*.css
+out/userChrome.css: src/userChrome/*.css out
 	( cd src/userChrome; cat $(USERCHROME_FILES) ) > $@
 
 install: all
