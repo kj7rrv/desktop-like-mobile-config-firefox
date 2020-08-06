@@ -1,0 +1,42 @@
+.subviewbutton,
+.toolbaritem-combined-buttons {
+  font-size: 8pt;
+}
+
+#appMenu-protection-report-button,
+#appMenuRestoreLastSession,
+#appMenu-customize-button,
+#appMenu-open-file-button,
+#appMenu-more-button,
+#appMenu-developer-button,
+#appMenu-whatsnew-button,
+#appMenu-help-button,
+#appMenu-quit-button {
+  display: none;
+}
+
+toolbarseparator {
+  display: none;
+}
+
+/* Zoom/edit: move controls to the left (so they are visible), hide label (it's obvious what they do) and spacer */
+#appMenu-zoom-controls spacer,
+#appMenu-zoom-controls label,
+#appMenu-edit-controls spacer,
+#appMenu-edit-controls label {
+  display: none;
+}
+
+/* Zoom/edit: center the controls somewhat */
+#appMenu-zoom-controls {
+  padding-left: 20px;
+}
+#appMenu-edit-controls {
+  padding-left: 15px;
+}
+
+/* Zoom: hide fullscreen button (not possible to exit fullscreen without keyboard) */
+#appMenu-fullscreen-button {
+  display: none;
+}
+

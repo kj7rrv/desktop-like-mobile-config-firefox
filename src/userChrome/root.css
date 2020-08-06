@@ -1,0 +1,4 @@
+/* Reduce minimum window width */
+:root {
+  min-width: 300px !important;
+}
