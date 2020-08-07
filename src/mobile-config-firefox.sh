@@ -23,9 +23,9 @@ for profiledir in ~/.mozilla/firefox/*/; do
 done
 
 if [ "$profile_found" = "true" ]; then
-	exec firefox "$@"
+	exec /usr/bin/firefox "$@"
 else
 	profiledir=~/.mozilla/firefox/firefox.default
 	prepare_profile "$profiledir"
-	exec firefox --profile "$profiledir" "$@"
+	exec /usr/bin/firefox --profile "$profiledir" "$@"
 fi

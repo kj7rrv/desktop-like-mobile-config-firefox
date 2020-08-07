@@ -31,8 +31,8 @@ install: all
 	install -Dm644 "out/userChrome.css" \
 		"$(DESTDIR)/etc/mobile-config-firefox/userChrome.css"
 	install -Dm755 "src/mobile-config-firefox.sh" \
-		"$(DESTDIR)/usr/bin/mobile-config-firefox"
-	install -Dm644 "src/mobile-config-firefox.desktop" \
-		"$(DESTDIR)/usr/mobile-config/share/applications/org.mozilla.firefox.desktop"
+		"$(DESTDIR)/usr/mobile-config/bin/firefox"
+	install -Dm755 "src/mobile-config-path.sh" \
+		"$(DESTDIR)/etc/profile.d/mobile-config-path.sh"
 
 .PHONY: all clean install
