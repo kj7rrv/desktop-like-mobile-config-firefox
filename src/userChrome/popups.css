@@ -1,0 +1,31 @@
+/* Copyright 2020 Oliver Smith
+   SPDX-License-Identifier: GPL-3.0-or-later */
+
+/* Popup notifications (install add-on etc.): set max-width, remove icon and
+ * make font smaller so it fits the box */
+.popup-notification-body-container {
+  max-width: 170px;
+}
+.popup-notification-icon {
+  display: none;
+}
+.popup-notification-body {
+  font-size: 8pt;
+}
+
+/* "Site information" (displayed when clicking the lock icon)
+ * Making everything so small doesn't look terribly nice, but least it fits the
+ * popup and everything is clickable. */
+#identity-popup-multiView .panel-viewcontainer {
+  font-size: 4pt;
+}
+#identity-popup-clear-sitedata-footer,
+#identity-popup-more-info-footer {
+  font-size: 7pt;
+}
+
+/* "Protections" (displayed when clicking the shield icon)
+ * Same reasoning for small font, as for identity-popup above. */
+#protections-popup-mainView {
+  font-size: 4pt;
+}
