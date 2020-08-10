@@ -28,12 +28,9 @@
   display: none !important;
 }
 
-/* urlbar not focused: smaller font */
+/* Smaller font: show more of the URL */
 #urlbar-input {
   font-size: 9pt !important;
-}
-#urlbar[open] #urlbar-input {
-  font-size: 10pt !important;
 }
 
 /* Focused urlbar: hide all icons around it, so we have more space to edit the URL */
