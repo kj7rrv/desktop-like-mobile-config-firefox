@@ -1,7 +1,6 @@
 {
   "policies": {
 
-    "DisableDeveloperTools": true,
     "DisableFirefoxScreenshots": true,
     "DisableFirefoxStudies": true,
     "DisableTelemetry": true,
