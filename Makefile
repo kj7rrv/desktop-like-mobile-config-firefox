@@ -1,7 +1,7 @@
 # Copyright 2020 Oliver Smith
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-USERCHROME_FILES := root.css urlbar.css appMenu.css
+USERCHROME_FILES := $(sort $(wildcard src/userChrome/*.css))
 HOMEPAGE_FILES := head.html distro_links.html bottom.html
 DISTRO := postmarketOS
 DESTDIR :=
@@ -18,8 +18,8 @@ out/home.html: src/homepage/*.html out
 	sed "s/@DISTRO@/$(DISTRO)/g" "$@.temp" > "$@"
 	rm "$@.temp"
 
-out/userChrome.css: src/userChrome/*.css out
-	( cd src/userChrome; cat $(USERCHROME_FILES) ) > $@
+out/userChrome.css: $(USERCHROME_FILES) out
+	cat $(USERCHROME_FILES) > $@
 
 install: all
 	install -Dm644 src/policies.json \
