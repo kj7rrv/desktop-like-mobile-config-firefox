@@ -20,3 +20,12 @@ pref('browser.newtabpage.enabled', false);
 
 // Allow UI customizations with userChrome.css and userContent.css
 pref('toolkit.legacyUserProfileCustomizations.stylesheets', true);
+
+// Select the entire URL with one click
+pref('browser.urlbar.clickSelectsAll', true);
+
+// Disable cosmetic animations, save CPU
+pref('toolkit.cosmeticAnimations.enabled', false);
+
+// Disable download animations, save CPU
+pref('browser.download.animateNotifications', false);
