@@ -6,7 +6,7 @@
   min-width: 160px;
   width: 160px;
 }
-input.findbar-textbox {
+[anonid="findbar-textbox"] {
  max-width: 100px;
  min-width: 100px;
  width: 100px;
