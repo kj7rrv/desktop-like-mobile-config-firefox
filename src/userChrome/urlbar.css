@@ -29,7 +29,8 @@
 }
 
 /* Smaller font: show more of the URL */
-#urlbar-input {
+#urlbar-input,
+input.urlbar-input /* FF 68 ESR */ {
   font-size: 9pt !important;
 }
 
@@ -46,4 +47,16 @@
 #nav-bar[urlbar-exceeds-toolbar-bounds] #urlbar-container {
   margin-left: -50px !important;
   margin-right: -25px !important;
+}
+
+/* FF 68 ESR: does not have the exceeding urlbar, needs this padding to look good */
+input.urlbar-input {
+  padding-left: 5px !important;
+}
+
+/* FF 68 ESR: hide buttons inside the right of the urlbar, which are reachable from the "..." menu too */
+#pocket-button-box,
+#star-button-box,
+.urlbar-history-dropmarker {
+  display: none;
 }
