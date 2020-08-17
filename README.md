@@ -2,7 +2,7 @@
 
 An attempt at creating a distro-independent mobile and privacy friendly configuration for Firefox ESR 68 *(last planned release before EOL: [2020-08-25](https://wiki.mozilla.org/Release_Management/Calendar))*, ESR 78 *(supported by Mozilla until ~2021-04)* and newer versions. As of writing, these configs work with Phosh and Firefox 68 (ESR), 78 (ESR) and 79.
 
-This does not replace a proper implementation in [Firefox upstream](https://bugzilla.mozilla.org/show_bug.cgi?id=1579348). Some dialogs are still hard to use or look a bit awkward. But overall, it makes the browser usable on mobile.
+This does not replace a proper implementation in [Firefox upstream](https://bugzilla.mozilla.org/show_bug.cgi?id=1579348) *(interesting stuff happens in issues linked in "References")*. Some dialogs are still hard to use or look a bit awkward. But overall, it makes the browser usable on mobile.
 
 ## What this config does
 ### Visual
