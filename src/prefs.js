@@ -1,6 +1,10 @@
 // Copyright 2020 Oliver Smith, Martijn Braam
 // SPDX-License-Identifier: GPL-3.0-or-later
 
+// Set up autoconfig (we use it to copy/update userChrome.css into profile dir)
+pref('general.config.filename', "mobile-config-autoconfig.js");
+pref('general.config.obscure_value', 0);
+
 // Select a mobile user agent for firefox (same as tor browser on android)
 pref('general.useragent.override', 'Mozilla/5.0 (Android 6.0; Mobile; rv:68.0) Gecko/20100101 Firefox/68.0');
 

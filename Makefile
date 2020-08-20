@@ -27,13 +27,11 @@ install: all
 		"$(DESTDIR)/etc/firefox/policies/policies.json"
 	install -Dm644 src/prefs.js \
 		"$(DESTDIR)/$(FIREFOX_DIR)/defaults/pref/mobile-config.js"
+	install -Dm644 src/mobile-config-autoconfig.js \
+		"$(DESTDIR)/$(FIREFOX_DIR)/mobile-config-autoconfig.js"
 	install -Dm644 "out/home.html" \
 		"$(DESTDIR)/usr/share/mobile-config-firefox/home.html"
 	install -Dm644 "out/userChrome.css" \
 		"$(DESTDIR)/etc/mobile-config-firefox/userChrome.css"
-	install -Dm755 "src/mobile-config-firefox.sh" \
-		"$(DESTDIR)/usr/mobile-config/bin/firefox"
-	install -Dm755 "src/mobile-config-path.sh" \
-		"$(DESTDIR)/etc/profile.d/mobile-config-path.sh"
 
 .PHONY: all clean install
