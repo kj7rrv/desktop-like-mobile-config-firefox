@@ -25,8 +25,8 @@ out/userChrome.css: $(USERCHROME_FILES) out
 install: all
 	install -Dm644 src/policies.json \
 		"$(DESTDIR)/etc/firefox/policies/policies.json"
-	install -Dm644 src/prefs.js \
-		"$(DESTDIR)/$(FIREFOX_DIR)/defaults/pref/mobile-config.js"
+	install -Dm644 src/mobile-config-prefs.js \
+		"$(DESTDIR)/$(FIREFOX_DIR)/defaults/pref/mobile-config-prefs.js"
 	install -Dm644 src/mobile-config-autoconfig.js \
 		"$(DESTDIR)/$(FIREFOX_DIR)/mobile-config-autoconfig.js"
 	install -Dm644 "out/home.html" \
