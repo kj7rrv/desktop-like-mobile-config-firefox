@@ -1,6 +1,6 @@
 # mobile-config-firefox
 
-An attempt at creating a distro-independent mobile and privacy friendly configuration for Firefox ESR 68 *(last planned release before EOL: [2020-08-25](https://wiki.mozilla.org/Release_Management/Calendar))*, ESR 78 *(supported by Mozilla until ~2021-04)* and newer versions. As of writing, these configs work with Phosh and Firefox 68 (ESR), 78 (ESR) and 79.
+An attempt at creating a distro-independent mobile and privacy friendly configuration for Firefox ESR 78 *(supported by Mozilla until ~2021-04)* and newer versions. As of writing, these configs work with Phosh and Firefox 78 (ESR) and 82.0.3.
 
 This does not replace a proper implementation in [Firefox upstream](https://bugzilla.mozilla.org/show_bug.cgi?id=1579348) *(interesting stuff happens in issues linked in "References")*. Some dialogs are still hard to use or look a bit awkward. But overall, it makes the browser usable on mobile.
 
@@ -51,7 +51,6 @@ Firefox' developer tools include a [remote debugger](https://developer.mozilla.o
   * Set up environment variables properly, so you can start programs (one lazy way to do it, is `tmux` on your phone in the terminal, then `tmux a` in SSH)
   * Run `firefox --start-debugger-server 6000` (or another port if you desire)
 * Run Firefox on your PC
-  * (Firefox ESR 68: enable `devtools.aboutdebugging.new-enabled` in `about:config`)
   * Go to `about:debugging`
   * Add your phone as "network location"
   * Press the connect button on the left
