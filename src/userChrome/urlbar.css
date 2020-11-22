@@ -41,9 +41,3 @@
 #urlbar[focused] #pageActionButton {
   display: none;
 }
-
-/* Focused urlbar: use almost full screen width (let it cover buttons left and right, which are not useful when editing the URL) */
-#nav-bar[urlbar-exceeds-toolbar-bounds] #urlbar-container {
-  margin-left: -50px !important;
-  margin-right: -25px !important;
-}
