@@ -6,6 +6,8 @@ This does not replace a proper implementation in [Firefox upstream](https://bugz
 
 ## What this config does
 ### Visual
+*Starting with version 2.0.0, the visual tweaks only get activated if you have a small window width. **It works nicely with convergence.***
+
 `mobile-config-firefox` installs a `userChrome.css` file to reduce the minimum width of the main window, so it fits the screen without scaling it down. The content of popup windows (settings menu, install add-on confirmation, ...) would be cut off with the default configuration, so as workaround the content is reduced to make it fit the windows again. (It was not possible to increase the size of these windows merely with CSS). The find bar (appears with `^F` on your PC, can be toggled from the menu too) is tweaked to fit the mobile screen as well.
 
 The visible width of the URL is increased by hiding buttons around the urlbar (most features behind those buttons can be accessed through other menus), and by decreasing the font size. Furthermore, the urlbar will float above buttons on the left and right when focused, to leave even more space for typing the URL or search query.
