@@ -16,7 +16,7 @@ The visible width of the URL is increased by hiding buttons around the urlbar (m
 
 ### Other Mobile Related
 * Enable zooming with fingers <small>(Change in about:config; apz.allow_zooming, apz.allow_double_tap_zooming, dom.w3c.touch_events.enabled)</small>
-* Mobile user agent (from TOR browser for Android) <small>(Change in about:config; general.useragent.override)</small>
+* Mobile user agent (from Tor browser for Android) <small>(Change in about:config; general.useragent.override)</small>
 
 ### Privacy
 * Disable search suggestions, so URLs do not get sent to search engines as they are getting typed <small>(Change in Preferences)</small>
