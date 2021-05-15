@@ -2,12 +2,13 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 USERCHROME_FILES := $(sort $(wildcard src/userChrome/*.css))
+USERCONTENT_FILES := $(sort $(wildcard src/userContent/*.css))
 HOMEPAGE_FILES := head.html distro_links.html bottom.html
 DISTRO := postmarketOS
 DESTDIR :=
 FIREFOX_DIR := /usr/lib/firefox
 
-all: out/home.html out/userChrome.css
+all: out/home.html out/userChrome.css out/userContent.css
 
 clean:
 	rm -rf out
@@ -22,6 +23,9 @@ out/home.html: src/homepage/*.html out
 out/userChrome.css: $(USERCHROME_FILES) out
 	cat $(USERCHROME_FILES) > $@
 
+out/userContent.css: $(USERCONTENT_FILES) out
+	cat $(USERCONTENT_FILES) > $@
+
 install: all
 	install -Dm644 src/policies.json \
 		"$(DESTDIR)/etc/firefox/policies/policies.json"
@@ -33,5 +37,7 @@ install: all
 		"$(DESTDIR)/usr/share/mobile-config-firefox/home.html"
 	install -Dm644 "out/userChrome.css" \
 		"$(DESTDIR)/etc/mobile-config-firefox/userChrome.css"
+	install -Dm644 "out/userContent.css" \
+		"$(DESTDIR)/etc/mobile-config-firefox/userContent.css"
 
 .PHONY: all clean install

@@ -1,0 +1,17 @@
+@-moz-document url("about:preferences"), url-prefix("about:preferences") {
+    /* avoid that sidebar is too wide */
+    .navigation {
+        max-width: 50px;
+    }
+
+    /* reduce space around category icons */
+    #categories > .category {
+        margin-inline-start: 2px !important;
+        padding-inline: 2px !important;
+    }
+
+    /* reduce space around footer icons (addons, help) */
+    .sidebar-footer-list {
+        margin-inline: 2px !important;
+    }
+}
