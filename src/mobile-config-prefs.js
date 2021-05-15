@@ -13,6 +13,9 @@ pref('dom.w3c.touch_events.enabled', true);
 pref('apz.allow_zooming', true);
 pref('apz.allow_double_tap_zooming', true);
 
+// Save vertical space by drawing directly in the titlebar
+pref('browser.tabs.drawInTitlebar', true);
+
 // Disable search suggestions
 pref('browser.search.suggest.enabled', false);
 
