@@ -63,3 +63,6 @@ Firefox' developer tools include a [remote debugger](https://developer.mozilla.o
   * Scroll down to Processes, Main Process, and click "Inspect"
   * Now use the "Pick an element" button as described in the introduction. Find the `userChrome.css` file in the "Style editor" tab and edit it as you like.
   * Consider copy pasting the contents to a text editor every now and then, so you don't lose it when closing Firefox by accident.
+
+## Additional resources
+* [FirefoxCSS subreddit](https://www.reddit.com/r/FirefoxCSS/)
