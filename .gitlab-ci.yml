@@ -1,0 +1,12 @@
+image: alpine:latest
+
+before_script:
+  - apk -q add make
+
+build:
+  stage: build
+  script:
+    - make
+  artifacts:
+    paths:
+      - out
