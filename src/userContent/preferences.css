@@ -1,17 +1,32 @@
 @-moz-document url("about:preferences"), url-prefix("about:preferences") {
-    /* avoid that sidebar is too wide */
-    .navigation {
-        max-width: 50px;
+    @media (max-width: 700px) {
+        /* avoid that sidebar is too wide */
+        :root {
+            --in-content-sidebar-width: 50px !important;
+        }
+
+        #categories > .category {
+            margin-inline-start: auto !important;
+            padding-inline: auto !important;
+        }
+
+        .category-name {
+            display: none !important;
+        }
+
+        .sidebar-footer-list {
+            margin-inline: auto !important;
+            padding-inline: auto !important;
+        }
+
+        .sidebar-footer-label {
+            display:none !important;
+        }
     }
 
-    /* reduce space around category icons */
-    #categories > .category {
-        margin-inline-start: 2px !important;
-        padding-inline: 2px !important;
-    }
-
-    /* reduce space around footer icons (addons, help) */
-    .sidebar-footer-list {
-        margin-inline: 2px !important;
+    @media (max-height: 400px) {
+        #categories {
+            margin-top: 8px !important;
+        }
     }
 }
