@@ -1,0 +1,8 @@
+/* Copyright 2021 Anri Dellal
+   SPDX-License-Identifier: GPL-3.0-or-later */
+
+@-moz-document url("about:addons"), url-prefix("about:addons") {
+    :root {
+        --section-width: min(664px, 100%) !important;
+    }
+}

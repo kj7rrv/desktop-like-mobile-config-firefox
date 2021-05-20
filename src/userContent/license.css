@@ -1,0 +1,11 @@
+/* Copyright 2021 Anri Dellal
+   SPDX-License-Identifier: GPL-3.0-or-later */
+
+@-moz-document url("about:license") {
+    @media (max-width: 500px) {
+        .license-header {
+            background-image: none !important;
+            padding-inline-end: unset !important;
+        }
+    }
+}
