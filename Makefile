@@ -1,8 +1,9 @@
 # Copyright 2020 Oliver Smith
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-USERCHROME_FILES := $(sort $(wildcard src/userChrome/*.css))
-USERCONTENT_FILES := $(sort $(wildcard src/userContent/*.css))
+HEADER_FILE := src/common/header.css
+USERCHROME_FILES := $(HEADER_FILE) $(sort $(wildcard src/userChrome/*.css))
+USERCONTENT_FILES := $(HEADER_FILE) $(sort $(wildcard src/userContent/*.css))
 HOMEPAGE_FILES := head.html distro_links.html bottom.html
 DISTRO := postmarketOS
 DESTDIR :=
