@@ -1,4 +1,4 @@
-// Copyright 2020 Oliver Smith, Martijn Braam
+// Copyright 2021 Oliver Smith, Martijn Braam
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 // Set up autoconfig (we use it to copy/update userChrome.css into profile dir)

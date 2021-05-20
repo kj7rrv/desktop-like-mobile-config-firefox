@@ -1,4 +1,4 @@
-// Copyright 2020 Arnaud Ferraris, Oliver Smith
+// Copyright 2021 Arnaud Ferraris, Oliver Smith
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 // This is a Firefox autoconfig file:
