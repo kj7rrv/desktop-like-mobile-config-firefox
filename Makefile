@@ -40,5 +40,7 @@ install: all
 		"$(DESTDIR)/etc/mobile-config-firefox/userChrome.css"
 	install -Dm644 "out/userContent.css" \
 		"$(DESTDIR)/etc/mobile-config-firefox/userContent.css"
+	install -Dm644 org.postmarketos.mobile_config_firefox.metainfo.xml \
+		"$(DESTDIR)/usr/share/metainfo/org.postmarketos.mobile_config_firefox.metainfo.xml"
 
 .PHONY: all clean install

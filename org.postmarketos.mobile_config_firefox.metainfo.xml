@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="addon">
+  <id>org.postmarketos.mobile_config_firefox</id>
+  
+  <name>Mobile Config for Firefox</name>
+  <summary>Mobile and privacy friendly configuration for Firefox (distro-independent)</summary>
+  
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-only</project_license>
+  
+  <extends>
+    <id>org.mozilla.firefox</id>
+  </extends>
+  
+  <description>
+    <p>
+      UI optimizations to allow using Firefox on mobile devices (i.e. small touch screen), including two finger zoom and enforcing of mobile user agent. Privacy enhancements such as disabled search suggestions, disabled Firefox studies, disabled Telemetry and DuckDuckGo as default search engine.
+    </p>
+  </description>
+</component>
