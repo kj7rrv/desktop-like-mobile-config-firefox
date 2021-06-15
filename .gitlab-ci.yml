@@ -7,6 +7,7 @@ build:
   stage: build
   script:
     - make
+    - make DESTDIR=mobile-config-firefox install
   artifacts:
     paths:
-      - out
+      - mobile-config-firefox
