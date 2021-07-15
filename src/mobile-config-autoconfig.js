@@ -47,3 +47,6 @@ if (contentFile.exists() && defaultContent.exists() &&
 if (!contentFile.exists()) {
   defaultContent.copyTo(chromeDir, "userContent.css");
 }
+
+// Select a mobile user agent for firefox (same as tor browser on android)
+defaultPref('general.useragent.override', 'Mozilla/5.0 (Android 9; Mobile; rv:78.0) Gecko/20100101 Firefox/78.0');
