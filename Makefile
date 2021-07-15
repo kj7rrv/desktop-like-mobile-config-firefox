@@ -8,6 +8,7 @@ HOMEPAGE_FILES := head.html distro_links.html bottom.html
 DISTRO := postmarketOS
 DESTDIR :=
 FIREFOX_DIR := /usr/lib/firefox
+FIREFOX_CONFIG_DIR := /etc/firefox
 
 all: out/home.html out/userChrome.css out/userContent.css
 
@@ -29,7 +30,7 @@ out/userContent.css: $(USERCONTENT_FILES) out
 
 install: all
 	install -Dm644 src/policies.json \
-		"$(DESTDIR)/etc/firefox/policies/policies.json"
+		"$(DESTDIR)/$(FIREFOX_CONFIG_DIR)/policies/policies.json"
 	install -Dm644 src/mobile-config-prefs.js \
 		"$(DESTDIR)/$(FIREFOX_DIR)/defaults/pref/mobile-config-prefs.js"
 	install -Dm644 src/mobile-config-autoconfig.js \
