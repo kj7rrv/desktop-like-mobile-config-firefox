@@ -49,4 +49,4 @@ if (!contentFile.exists()) {
 }
 
 // Select a mobile user agent for firefox (same as tor browser on android)
-defaultPref('general.useragent.override', 'Mozilla/5.0 (Android 9; Mobile; rv:78.0) Gecko/20100101 Firefox/78.0');
+defaultPref('general.useragent.override', 'Mozilla/5.0 (Android 9; Mobile; rv:78.0) Gecko/78.0 Firefox/78.0');
