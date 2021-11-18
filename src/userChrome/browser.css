@@ -1,0 +1,9 @@
+/* Copyright 2021 plata
+ * SPDX-License-Identifier: GPL-3.0-or-later */
+
+/* Move navigation bar to bottom */
+@media (max-width: 700px) {
+    #browser {
+        -moz-box-ordinal-group: 0 !important;
+    }
+}
