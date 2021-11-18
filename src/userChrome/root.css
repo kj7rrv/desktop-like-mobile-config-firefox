@@ -1,7 +1,7 @@
 /* Copyright 2021 Oliver Smith
-   SPDX-License-Identifier: GPL-3.0-or-later */
+ * SPDX-License-Identifier: GPL-3.0-or-later */
 
 /* Reduce minimum window width */
 :root {
-  min-width: 300px !important;
+    min-width: 300px !important;
 }

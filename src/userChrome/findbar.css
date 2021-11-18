@@ -1,27 +1,27 @@
 /* Copyright 2021 Oliver Smith
-   SPDX-License-Identifier: GPL-3.0-or-later */
+ * SPDX-License-Identifier: GPL-3.0-or-later */
 
 @media (max-width: 700px) {
-	/* Findbar */
-	[anonid="findbar-textbox-wrapper"] {
-	  min-width: 160px;
-	  width: 160px;
-	}
-	[anonid="findbar-textbox"] {
-	 max-width: 100px;
-	 min-width: 100px;
-	 width: 100px;
-	}
-	.findbar-button {
-	  font-size: 6pt;
-	}
-	/* Save space */
-	.findbar-match-diacritics,
-	.findbar-entire-word,
-	.found-matches,
-	.findbar-find-status,
-	.find-status-icon
-	{
-	  display: none;
-	}
+    /* Findbar */
+    [anonid="findbar-textbox-wrapper"] {
+        min-width: 160px;
+        width: 160px;
+    }
+    [anonid="findbar-textbox"] {
+        max-width: 100px;
+        min-width: 100px;
+        width: 100px;
+    }
+    .findbar-button {
+        font-size: 6pt;
+    }
+    /* Save space */
+    .findbar-match-diacritics,
+    .findbar-entire-word,
+    .found-matches,
+    .findbar-find-status,
+    .find-status-icon
+    {
+        display: none;
+    }
 }

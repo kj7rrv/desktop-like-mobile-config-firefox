@@ -1,5 +1,5 @@
 /* Copyright 2021 Anri Dellal
-   SPDX-License-Identifier: GPL-3.0-or-later */
+ * SPDX-License-Identifier: GPL-3.0-or-later */
 
 @-moz-document regexp("about:preferences.*") {
     .sticky-container {
@@ -14,7 +14,7 @@
     .fxaMobilePromo {
         display: none;
     }
-    
+
     @media (max-width: 700px) {
         .fxaSyncIllustration {
             display: none;

@@ -1,46 +1,46 @@
 /* Copyright 2021 Oliver Smith
-   SPDX-License-Identifier: GPL-3.0-or-later */
+ * SPDX-License-Identifier: GPL-3.0-or-later */
 
 /* Reduce minimum window width */
 #urlbar-container {
-  min-width: 150px !important;
+    min-width: 150px !important;
 }
 
 @media (max-width: 700px) {
-	/* Remove various buttons left and right of the URL bar:
-	   - forward-button: also reachable via longpress of back button
-	   - home-button: not important enough
-	   - customizableui-special-spring: empty space
-	   - library-button: also reachable via PanelUI-menu-button
-	   - sidebar-button: not useful on mobile (we try to gain horizontal space)
-	   - fxa-toolbar-menu-button: firefox cloud stuff, also reachable via
-	     #PanelUI-menu-button
-	*/
-	/* #back-button */
-	#forward-button,
-	/* #reload-button */
-	#home-button,
-	#customizableui-special-spring1,
-	/* (urlbar) */
-	#customizableui-special-spring2,
-	#library-button,
-	#sidebar-button,
-	#fxa-toolbar-menu-button
-	/* #PanelUI-menu-button */ {
-	  display: none !important;
-	}
+    /* Remove various buttons left and right of the URL bar:
+       - forward-button: also reachable via longpress of back button
+       - home-button: not important enough
+       - customizableui-special-spring: empty space
+       - library-button: also reachable via PanelUI-menu-button
+       - sidebar-button: not useful on mobile (we try to gain horizontal space)
+       - fxa-toolbar-menu-button: firefox cloud stuff, also reachable via
+         #PanelUI-menu-button
+    */
+    /* #back-button */
+    #forward-button,
+    /* #reload-button */
+    #home-button,
+    #customizableui-special-spring1,
+    /* (urlbar) */
+    #customizableui-special-spring2,
+    #library-button,
+    #sidebar-button,
+    #fxa-toolbar-menu-button
+    /* #PanelUI-menu-button */ {
+        display: none !important;
+    }
 
-	/* Smaller font: show more of the URL */
-	#urlbar-input {
-	  font-size: 9pt !important;
-	}
+    /* Smaller font: show more of the URL */
+    #urlbar-input {
+        font-size: 9pt !important;
+    }
 
-	/* Focused urlbar: hide all icons around it, so we have more space to edit the URL */
-	#urlbar[focused] #identity-box,
-	#urlbar[focused] #tracking-protection-icon-container,
-	/* #urlbar-input */
-	#urlbar[focused] #reader-mode-button,
-	#urlbar[focused] #pageActionButton {
-	  display: none;
-	}
+    /* Focused urlbar: hide all icons around it, so we have more space to edit the URL */
+    #urlbar[focused] #identity-box,
+    #urlbar[focused] #tracking-protection-icon-container,
+    /* #urlbar-input */
+    #urlbar[focused] #reader-mode-button,
+    #urlbar[focused] #pageActionButton {
+        display: none;
+    }
 }
