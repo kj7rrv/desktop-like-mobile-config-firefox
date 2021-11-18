@@ -43,4 +43,11 @@
     #urlbar[focused] #pageActionButton {
         display: none;
     }
+
+    /* Label of "identity icons", e.g. firefox specific pages look weird
+     * when ellipsed, e.g. "F..x" instead of "Firefox". So just hide this
+     * label. The icon itself is still visible. */
+    #identity-icon-label {
+        display: none;
+    }
 }
