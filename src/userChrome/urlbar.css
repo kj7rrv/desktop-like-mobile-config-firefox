@@ -50,4 +50,22 @@
     #identity-icon-label {
         display: none;
     }
+
+    /* Move urlbar results to cover the whole displayed website, instead of
+     * being below the urlbar. */
+    .urlbarView {
+        position: fixed !important;
+        inset: 0px 0px 84px 0px;
+        width: 100% !important;
+
+        background: var(--arrowpanel-background);
+
+        margin: 0px !important;
+        margin-inline: 0px !important;
+        border-inline: 0px !important;
+
+        overflow-y:  auto !important;
+        overflow-x: none !important;
+        scrollbar-width: none;
+    }
 }
