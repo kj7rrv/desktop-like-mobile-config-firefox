@@ -2,47 +2,51 @@
  * SPDX-License-Identifier: GPL-3.0-or-later */
 
 @media (max-width: 700px) {
-    .subviewbutton,
-    .toolbaritem-combined-buttons {
-        font-size: 8pt;
+    /* Spawn the menu above the navigation bar (now that we've moved it to the
+     * bottom). Without this, it still spawns above, but only with a small
+     * height. This is due to the position="bottomcenter topright" attribute in
+     * the HTML, which we can't override via CSS. */
+    #appMenu-popup {
+        margin-top: -390px !important;
+        height: 310px;
+        max-height: 310px;
+    }
+    #appMenu-protonMainView vbox.panel-subview-body {
+        height: 300px !important;
+        max-height: 300px !important;
+    }
+    #appMenu-multiView box.panel-viewstack:first-child {
+        /* Use the whole space in the menu, instead of slowly increasing the
+         * height via animation. This animation is broken anyway due to the
+         * above menu size hack */
+        height: calc(100vh - 100px) !important;
+        max-height: calc(100vh - 100px) !important;
     }
 
-    #appMenu-protection-report-button,
-    #appMenuRestoreLastSession,
-    #appMenu-customize-button,
-    #appMenu-open-file-button,
-    #appMenu-more-button,
-    #appMenu-developer-button,
-    #appMenu-whatsnew-button,
-    #appMenu-help-button,
-    #appMenu-quit-button {
-        display: none;
-    }
-
-    toolbarseparator {
-        display: none;
-    }
-
-    /* Zoom/edit: move controls to the left (so they are visible), hide
-     * label (it's obvious what they do) and spacer */
-    #appMenu-zoom-controls spacer,
-    #appMenu-zoom-controls label,
-    #appMenu-edit-controls spacer,
-    #appMenu-edit-controls label {
-        display: none;
-    }
-
-    /* Zoom/edit: center the controls somewhat */
-    #appMenu-zoom-controls {
-        padding-left: 20px;
-    }
-    #appMenu-edit-controls {
-        padding-left: 15px;
-    }
-
-    /* Zoom: hide fullscreen button (not possible to exit fullscreen
-     * without keyboard) */
-    #appMenu-fullscreen-button {
-        display: none;
+    /* Menu content
+     * - configure it to have most important functions for mobile
+     *   on one page, without scrolling. (Scrolling was only possible with the
+     *   scrollbar on the right anyway, which is awkward when expecting to be
+     *   able to scroll with fingers.)
+     * - submenus are hidden, because attempting to scroll inside them with the
+     *   finger causes firefox to segfault. This is likely due to the menu
+     *   positioning hack above, looks like FF can't determine the height
+     *   properly. Help with fixing this is appreciated, the bookmarks and
+     *   history submenus would be useful. However even without the submenus,
+     *   the history and saved bookmarks can at least be accessed conveniently
+     *   through the navigation search. */
+    #appMenu-fxa-status2, /* FF login */
+    #appMenu-fxa-separator, /* FF login */
+    #appMenu-new-window-button2,
+    #appMenu-protonMainView toolbarseparator, /* all separators */
+    #appMenu-save-file-button2, /* Save file can be done from Print too */
+    #appMenu-passwords-button, /* accessible from settings */
+    #appMenu-extensions-themes-button, /* accessible from settings */
+    #appMenu-bookmarks-button, /* submenu */
+    #appMenu-history-button, /* submenu */
+    #appMenu-more-button2, /* submenu */
+    #appMenu-help-button2, /* submenu */
+    .subviewbutton[shortcut]::after { /* menu shortcuts ("Ctrl+T" etc.) */
+        display: none !important;
     }
 }
