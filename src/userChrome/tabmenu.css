@@ -58,4 +58,9 @@
         height: calc(100vh - 100px) !important;
         max-height: calc(100vh - 100px) !important;
     }
+
+    #allTabsMenu-allTabsViewTabs {
+        /* Make sure tabs with long titles don't exceed the all tabs menu */
+        max-width: calc(100vw - 20px);
+    }
 }
