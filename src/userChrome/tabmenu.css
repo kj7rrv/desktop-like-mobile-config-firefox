@@ -1,0 +1,27 @@
+/* Copyright 2021 Peter Mack, Oliver Smith
+ * SPDX-License-Identifier: GPL-3.0-or-later */
+
+@media (max-width: 700px) {
+    /* Increase tab width, to have more space for displaying the title of the
+     * website and to make the "all tabs" button show up. */
+    #tabbrowser-tabs {
+        --tab-min-width: calc(100vw - 86px) !important;
+    }
+
+    /* Rotate the arrow on the "all tabs" button to point upwards, since the
+     * tabs and searchbar were moved to the bottom. */
+    #alltabs-button {
+        transform: rotate(180deg) !important;
+    }
+
+    /* All tabs menu: hide scroll buttons */
+    #scrollbutton-up, #scrollbutton-down {
+        display: none !important;
+    }
+
+    /* All tabs menu: hide the search and the separator below it. */
+    #allTabsMenu-searchTabs,
+    #allTabsMenu-tabsSeparator {
+        display: none;
+    }
+}
