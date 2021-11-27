@@ -34,12 +34,18 @@
      *   properly. Help with fixing this is appreciated, the bookmarks and
      *   history submenus would be useful. However even without the submenus,
      *   the history and saved bookmarks can at least be accessed conveniently
-     *   through the navigation search. */
+     *   through the navigation search.
+     * - fullscreen is hidden: not available in FF for android either, the
+     *   screen is almost used completely already, causes problems with UIs
+     *   that don't expect apps to go fullscreen (i.e. in Phosh, as soon as
+     *   the on screen keyboard is triggered, the top and bottom bars of Phosh
+     *   are over the FF in fullscreen) */
     #appMenu-fxa-status2, /* FF login */
     #appMenu-fxa-separator, /* FF login */
     #appMenu-new-window-button2,
     #appMenu-protonMainView toolbarseparator, /* all separators */
     #appMenu-save-file-button2, /* Save file can be done from Print too */
+    #appMenu-fullscreen-button2,
     #appMenu-passwords-button, /* accessible from settings */
     #appMenu-extensions-themes-button, /* accessible from settings */
     #appMenu-bookmarks-button, /* submenu */
