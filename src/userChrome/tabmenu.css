@@ -24,4 +24,38 @@
     #allTabsMenu-tabsSeparator {
         display: none;
     }
+
+    /* Similar hack to what's in appMenu.css to properly spawn the "all tabs"
+     * popup above the navigation menu */
+    #customizationui-widget-panel {
+        /* Further up than appmenu, because the "all tabs" button that spawns
+         * this menu is above the hamburger button that spawns the regular
+         * menu. */
+        margin-top: -360px !important;
+        height: 320px;
+        max-height: 320px;
+    }
+
+    #allTabsMenu-allTabsView vbox.panel-subview-body {
+        /* Use the whole height */
+        height: 300px !important;
+        max-height: 300px !important;
+        /* When messing around with tabs, it gets into a state where it does
+         * not use the whole height anymore, it becomes a tiny window. Removing
+         * this attribute fixes it. */
+        -moz-box-flex: initial !important;
+    }
+
+    #allTabsMenu-allTabsView vbox.panel-subview-body:first-child {
+        /* the allTabsMenu has a vbox.panel-subview-body inside another one.
+         * With -moz-box-flex: initial, it will show a scroll bar in each, but
+         * we only want one scrollbar. */
+        overflow-y: hidden !important;
+    }
+
+    #allTabsMenu-multiView box.panel-viewstack {
+        /* Use the whole height */
+        height: calc(100vh - 100px) !important;
+        max-height: calc(100vh - 100px) !important;
+    }
 }
