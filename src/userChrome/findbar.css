@@ -2,26 +2,21 @@
  * SPDX-License-Identifier: GPL-3.0-or-later */
 
 @media (max-width: 700px) {
-    /* Findbar */
-    [anonid="findbar-textbox-wrapper"] {
-        min-width: 160px;
-        width: 160px;
+    .findbar-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 150px !important;
     }
-    [anonid="findbar-textbox"] {
-        max-width: 100px;
-        min-width: 100px;
-        width: 100px;
+
+    .findbar-textbox {
+        /* Overwrite fixed size, so the X on the right shows up */
+        width: 100% !important;
     }
-    .findbar-button {
-        font-size: 6pt;
-    }
-    /* Save space */
-    .findbar-match-diacritics,
-    .findbar-entire-word,
-    .found-matches,
-    .findbar-find-status,
-    .find-status-icon
-    {
-        display: none;
+
+    .findbar-container checkbox {
+        /* Add space around the buttons, looks nicer and makes it easier to hit
+         * them with the finger. */
+        padding: 10px 0px;
     }
 }
