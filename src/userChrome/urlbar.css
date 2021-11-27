@@ -68,4 +68,13 @@
         overflow-x: none !important;
         scrollbar-width: none;
     }
+
+    /* Bookmarks toolbar. Firefox shows it for some reason when opening a
+     * private browsing window, even if it is not enabled in the normal
+     * window view. Hide it for mobile, it eats precious space and can't be
+     * organized properly on mobile anyway. Using the searchbar to filter
+     * through bookmarks is much more efficient. */
+    #PersonalToolbar {
+        display: none;
+    }
 }
