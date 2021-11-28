@@ -2,6 +2,17 @@
  * SPDX-License-Identifier: GPL-3.0-or-later */
 
 @media (max-width: 700px) {
+    /* Hack to prevent popups from flickering around. It looks like e.g. the
+     * editBookmarkPanel has two heights otherwise, and draws one frame with a
+     * short height and one frame with the proper one. */
+    #mainPopupSet {
+        position: fixed !important;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 100px;
+    }
+
     /* Popup notifications (install add-on etc.): set max-width, remove icon and
      * make font smaller so it fits the box */
     .popup-notification-body-container {

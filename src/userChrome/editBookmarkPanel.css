@@ -1,0 +1,43 @@
+/* Copyright 2021 Oliver Smith
+ * SPDX-License-Identifier: GPL-3.0-or-later */
+
+@media (max-width: 700px) {
+    /* The only way I (ollieparanoid) found to make this not glitchy, was to
+     * reduce the bookmark panel to the minimum amount of useful controls and
+     * hardcode width and height. Patches to improve this welcome, but make
+     * sure that you don't introduce new UI glitches by doing extensive
+     * testing. */
+
+    #editBookmarkPanel {
+        margin-top: -390px !important;
+        height: 200px;
+        max-height: 200px;
+        max-width: calc(100vw - 100px);
+    }
+
+    #editBookmarkPanel box.panel-header,
+    #editBookmarkHeaderSeparator {
+        display: none !important;
+    }
+
+    #editBookmarkPanelContent {
+        max-width: 250px !important;
+        width: 250px !important;
+        padding-right: 20px;
+    }
+
+    /* Hide the screenshot and the line below it. The page is right there when
+     * you bring up the menu, no need for a screenshot. Also it has a glitch
+     * when taking the screenshot in mobile portrait view, half the screenshot
+     * is just black. Let's rather use the space to edit the bookmark
+     * information. */
+    #editBookmarkPanelInfoArea,
+    #editBookmarkSeparator {
+        display: none;
+    }
+
+    #editBMPanel_folderRow,
+    #editBMPanel_tagsRow {
+        display: none;
+    }
+}
