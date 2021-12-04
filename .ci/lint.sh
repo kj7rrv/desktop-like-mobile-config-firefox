@@ -51,7 +51,7 @@ lint_spaces() {
 
 lint_files() {
 	# shellcheck disable=SC3043
-	local files="$(find . -name '*.css' -o -name '*.js' -o -name '*.json')"
+	local files="$(find src -name '*.css' -o -name '*.js' -o -name '*.json')"
 
 	if [ -z "$files" ]; then
 		echo "ERROR: no files to lint found in current work dir"
@@ -75,7 +75,7 @@ lint_files() {
 	done
 }
 
-cd "$TOPDIR/src"
+cd "$TOPDIR"
 lint_files
 
 if [ "$EXIT_CODE" -eq 0 ]; then
