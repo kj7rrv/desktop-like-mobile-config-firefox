@@ -10,17 +10,12 @@ DESTDIR :=
 FIREFOX_DIR := /usr/lib/firefox
 FIREFOX_CONFIG_DIR := /etc/firefox
 
-all: out/home.html out/userChrome.css out/userContent.css
+all: out/userChrome.css out/userContent.css
 
 clean:
 	rm -rf out
 out:
 	mkdir out
-
-out/home.html: src/homepage/*.html out
-	( cd src/homepage; cat $(HOMEPAGE_FILES) ) > $@.temp
-	sed "s/@DISTRO@/$(DISTRO)/g" "$@.temp" > "$@"
-	rm "$@.temp"
 
 out/userChrome.css: $(USERCHROME_FILES) out
 	cat $(USERCHROME_FILES) > $@
@@ -35,8 +30,6 @@ install: all
 		"$(DESTDIR)/$(FIREFOX_DIR)/defaults/pref/mobile-config-prefs.js"
 	install -Dm644 src/mobile-config-autoconfig.js \
 		"$(DESTDIR)/$(FIREFOX_DIR)/mobile-config-autoconfig.js"
-	install -Dm644 "out/home.html" \
-		"$(DESTDIR)/usr/share/mobile-config-firefox/home.html"
 	install -Dm644 "out/userChrome.css" \
 		"$(DESTDIR)/etc/mobile-config-firefox/userChrome.css"
 	install -Dm644 "out/userContent.css" \

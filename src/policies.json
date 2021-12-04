@@ -10,7 +10,7 @@
         "OverridePostUpdatePage": "",
 
         "Homepage": {
-            "URL": "file:///usr/share/mobile-config-firefox/home.html",
+            "URL": "about:home",
             "Locked": false,
             "StartPage": "homepage"
         },
