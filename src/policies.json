@@ -1,30 +1,29 @@
 {
-  "policies": {
+    "policies": {
+        "DisableFirefoxScreenshots": true,
+        "DisableFirefoxStudies": true,
+        "DisableTelemetry": true,
+        "DisablePocket": true,
+        "NewTabPage": false,
+        "NoDefaultBookmarks": true,
+        "OverrideFirstRunPage": "",
+        "OverridePostUpdatePage": "",
 
-    "DisableFirefoxScreenshots": true,
-    "DisableFirefoxStudies": true,
-    "DisableTelemetry": true,
-    "DisablePocket": true,
-    "NewTabPage": false,
-    "NoDefaultBookmarks": true,
-    "OverrideFirstRunPage": "",
-    "OverridePostUpdatePage": "",
+        "Homepage": {
+            "URL": "file:///usr/share/mobile-config-firefox/home.html",
+            "Locked": false,
+            "StartPage": "homepage"
+        },
 
-    "Homepage": {
-      "URL": "file:///usr/share/mobile-config-firefox/home.html",
-      "Locked": false,
-      "StartPage": "homepage"
-    },
+        "SearchEngines": {
+            "Default": "DuckDuckGo"
+        },
 
-    "SearchEngines": {
-      "Default": "DuckDuckGo"
-    },
-
-    "UserMessaging": {
-      "WhatsNew": false,
-      "ExtensionRecommendations": false,
-      "FeatureRecommendations": false,
-      "UrlbarInterventions": false
+        "UserMessaging": {
+            "WhatsNew": false,
+            "ExtensionRecommendations": false,
+            "FeatureRecommendations": false,
+            "UrlbarInterventions": false
+        }
     }
-  }
 }
