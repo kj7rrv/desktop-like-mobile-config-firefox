@@ -13,7 +13,7 @@ Cu.import("resource://gre/modules/FileUtils.jsm");
 var chromeDir = Services.dirsvc.get("ProfD", Ci.nsIFile);
 chromeDir.append("chrome");
 if (!chromeDir.exists()) {
-  chromeDir.create(Ci.nsIFile.DIRECTORY_TYPE, FileUtils.PERMS_DIRECTORY);
+    chromeDir.create(Ci.nsIFile.DIRECTORY_TYPE, FileUtils.PERMS_DIRECTORY);
 }
 
 // Create nsIFile objects for userChrome.css in <profile>/chrome/ and in /etc/
@@ -24,12 +24,12 @@ var defaultChrome = new FileUtils.File("/etc/mobile-config-firefox/userChrome.cs
 // Remove the existing userChrome.css if older than the installed one
 if (chromeFile.exists() && defaultChrome.exists() &&
     chromeFile.lastModifiedTime < defaultChrome.lastModifiedTime) {
-  chromeFile.remove(false);
+    chromeFile.remove(false);
 }
 
 // Copy userChrome.css to <profile>/chrome/
 if (!chromeFile.exists()) {
-  defaultChrome.copyTo(chromeDir, "userChrome.css");
+    defaultChrome.copyTo(chromeDir, "userChrome.css");
 }
 
 // Create nsIFile objects for userContent.css in <profile>/chrome/ and in /etc/
@@ -40,12 +40,12 @@ var defaultContent = new FileUtils.File("/etc/mobile-config-firefox/userContent.
 // Remove the existing userContent.css if older than the installed one
 if (contentFile.exists() && defaultContent.exists() &&
     contentFile.lastModifiedTime < defaultContent.lastModifiedTime) {
-  contentFile.remove(false);
+    contentFile.remove(false);
 }
 
 // Copy userContent.css to <profile>/chrome/
 if (!contentFile.exists()) {
-  defaultContent.copyTo(chromeDir, "userContent.css");
+    defaultContent.copyTo(chromeDir, "userContent.css");
 }
 
 // Select a mobile user agent for firefox (same as tor browser on android)
