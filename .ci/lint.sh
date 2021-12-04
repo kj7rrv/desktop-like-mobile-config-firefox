@@ -7,7 +7,7 @@
 # simple shell script for now. This script needs find and GNU grep (for -P) and
 # a shell that knows "local".
 
-TOPDIR="$(realpath "$(dirname "$0")/..")"
+TOPDIR="$(realpath "$(dirname "$(realpath "$0")")/..")"
 CURRENT_FILE=""
 EXIT_CODE=0
 
