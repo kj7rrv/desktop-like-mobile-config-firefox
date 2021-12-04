@@ -42,7 +42,7 @@ lint_spaces() {
 
 	lint \
 		"indent with 4 spaces" \
-		-P '^([ ]{1,3}|[ ]{5,7})[a-zA-Z\[\.\/]'
+		-P '^([ ]{1,3}|[ ]{5,7})[a-zA-Z\[\.\/\"]'
 
 	lint \
 		"spaces at the end of lines are not allowed" \
