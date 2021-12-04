@@ -35,7 +35,7 @@ lint_spdx() {
 	fi
 }
 
-lint_file() {
+lint_spaces() {
 	lint \
 		"tabs found, indent with 4 spaces instead" \
 		-P '\t'
@@ -47,18 +47,31 @@ lint_file() {
 	lint \
 		"spaces at the end of lines are not allowed" \
 		-E ' $'
-
-	lint_spdx
 }
 
 lint_files() {
-	# shellcheck disable=SC2044
-	for CURRENT_FILE in $(find . -name '*.css'); do
-		if ! [ -e "$CURRENT_FILE" ]; then
-			echo "ERROR: no CSS files found in current work dir"
-			exit 1
-		fi
-		lint_file
+	# shellcheck disable=SC3043
+	local files="$(find . -name '*.css' -o -name '*.js' -o -name '*.json')"
+
+	if [ -z "$files" ]; then
+		echo "ERROR: no files to lint found in current work dir"
+		exit 1
+	fi
+
+	for CURRENT_FILE in $files; do
+		case ${CURRENT_FILE##*.} in
+			css)
+				lint_spaces
+				lint_spdx
+				;;
+			js)
+				lint_spaces
+				lint_spdx
+				;;
+			json)
+				lint_spaces
+				;;
+		esac
 	done
 }
 
