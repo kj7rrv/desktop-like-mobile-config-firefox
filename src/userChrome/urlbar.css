@@ -36,6 +36,7 @@
     }
 
     /* Focused urlbar: hide all icons around it, so we have more space to edit the URL */
+    #urlbar[focused] #remote-control-box,
     #urlbar[focused] #identity-box,
     #urlbar[focused] #tracking-protection-icon-container,
     /* #urlbar-input */
