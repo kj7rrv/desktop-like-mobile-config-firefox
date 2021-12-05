@@ -55,3 +55,9 @@ defaultPref('general.useragent.override', 'Mozilla/5.0 (Android 10; Mobile; rv:9
 // Settings -> Privacy & Security -> Address Bar -> Shortcuts. As side-effect,
 // the urlbar results are not immediatelly opened once clicking the urlbar.
 defaultPref('browser.urlbar.suggest.topsites', false);
+
+// Do not suggest search engines. Even though amazon is removed via
+// policies.json, it gets installed shortly after the browser is opened. With
+// this option, at least there is no big "Search with Amazon" message in the
+// urlbar results as soon as typing the letter "a".
+defaultPref('browser.urlbar.suggest.engines', false);
