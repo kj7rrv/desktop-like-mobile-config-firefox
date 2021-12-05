@@ -2,10 +2,24 @@
  * SPDX-License-Identifier: GPL-3.0-or-later */
 
 @media (max-width: 700px) {
+    /* Even when not in private browsing mode, reserve space to the right of
+     * the tab bar for the private-browsing-indicator (that mask icon). This
+     * gives the tab bar a consistent width in both the regular and the private
+     * browsing mode, so the increased width hack below looks good in both. */
+    #titlebar {
+        padding-right: 30px;
+    }
+    hbox.private-browsing-indicator {
+        position: fixed !important;
+        right: 0px;
+        bottom: 50px;
+        display: block;
+    }
+
     /* Increase tab width, to have more space for displaying the title of the
      * website and to make the "all tabs" button show up. */
     #tabbrowser-tabs {
-        --tab-min-width: calc(100vw - 86px) !important;
+        --tab-min-width: calc(100vw - 116px) !important;
     }
 
     /* Rotate the arrow on the "all tabs" button to point upwards, since the
