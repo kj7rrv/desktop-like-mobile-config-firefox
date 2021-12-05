@@ -40,7 +40,7 @@
     #urlbar[focused] #tracking-protection-icon-container,
     /* #urlbar-input */
     #urlbar[focused] #reader-mode-button,
-    #urlbar[focused] #pageActionButton {
+    #urlbar[focused] #page-action-buttons {
         display: none;
     }
 
