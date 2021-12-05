@@ -50,3 +50,8 @@ if (!contentFile.exists()) {
 
 // Select a mobile user agent for firefox (same as tor browser on android)
 defaultPref('general.useragent.override', 'Mozilla/5.0 (Android 10; Mobile; rv:91.0) Gecko/91.0 Firefox/91.0');
+
+// Do not suggest facebook, ebay, reddit etc. in the urlbar. Same as
+// Settings -> Privacy & Security -> Address Bar -> Shortcuts. As side-effect,
+// the urlbar results are not immediatelly opened once clicking the urlbar.
+defaultPref('browser.urlbar.suggest.topsites', false);
