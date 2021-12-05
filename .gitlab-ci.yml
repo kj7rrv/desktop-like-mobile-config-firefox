@@ -1,13 +1,17 @@
 image: alpine:latest
 
-before_script:
-  - apk -q add make
-
 build:
-  stage: build
+  before_script:
+    - apk -q add make
   script:
     - make
     - make DESTDIR=mobile-config-firefox install
   artifacts:
     paths:
       - mobile-config-firefox
+
+lint:
+  before_script:
+    - apk -q add grep
+  script:
+    - .ci/lint.sh
