@@ -131,7 +131,8 @@
             "WhatsNew": false,
             "ExtensionRecommendations": false,
             "FeatureRecommendations": false,
-            "UrlbarInterventions": false
+            "UrlbarInterventions": false,
+            "SkipOnboarding": false
         },
 
         "ExtensionSettings": {
