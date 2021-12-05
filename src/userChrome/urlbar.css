@@ -30,6 +30,10 @@
         display: none !important;
     }
 
+    #urlbar {
+        padding: 0px 5px;
+    }
+
     /* Smaller font: show more of the URL */
     #urlbar-input {
         font-size: 9pt !important;
