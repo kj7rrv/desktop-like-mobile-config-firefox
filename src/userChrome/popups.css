@@ -20,4 +20,8 @@
         margin-left: -200px !important;
         margin-top: -500px !important;
     }
+
+    #downloadsPanel-mainView {
+        max-width: calc(100vw - 10px);
+    }
 }
