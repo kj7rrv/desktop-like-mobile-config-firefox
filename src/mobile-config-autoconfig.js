@@ -61,3 +61,7 @@ defaultPref('browser.urlbar.suggest.topsites', false);
 // this option, at least there is no big "Search with Amazon" message in the
 // urlbar results as soon as typing the letter "a".
 defaultPref('browser.urlbar.suggest.engines', false);
+
+// Show about:home in new tabs, so it's not just a weird looking completely
+// empty page.
+defaultPref('browser.newtabpage.enabled', true);

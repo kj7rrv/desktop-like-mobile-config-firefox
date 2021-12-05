@@ -4,7 +4,6 @@
         "DisableFirefoxStudies": true,
         "DisableTelemetry": true,
         "DisablePocket": true,
-        "NewTabPage": false,
         "NoDefaultBookmarks": true,
         "OverrideFirstRunPage": "",
         "OverridePostUpdatePage": "",
