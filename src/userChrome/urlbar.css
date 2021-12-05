@@ -78,3 +78,11 @@
         display: none;
     }
 }
+
+/* Even though amazon is removed as search engine in policies.json, it gets
+ * installed when FF starts for the first time. Hide the button in "This time,
+ * search with" inside the urlbar. Match localizations like Amazon.de with this
+ * regex. */
+button[id^='urlbar-engine-one-off-item-Amazon'] {
+    display: none !important;
+}
