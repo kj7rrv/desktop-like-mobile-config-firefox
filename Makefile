@@ -4,8 +4,6 @@
 HEADER_FILE := src/common/header.css
 USERCHROME_FILES := $(HEADER_FILE) $(sort $(wildcard src/userChrome/*.css))
 USERCONTENT_FILES := $(HEADER_FILE) $(sort $(wildcard src/userContent/*.css))
-HOMEPAGE_FILES := head.html distro_links.html bottom.html
-DISTRO := postmarketOS
 DESTDIR :=
 FIREFOX_DIR := /usr/lib/firefox
 FIREFOX_CONFIG_DIR := /etc/firefox
