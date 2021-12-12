@@ -24,4 +24,11 @@
     #downloadsPanel-mainView {
         max-width: calc(100vw - 10px);
     }
+
+    /* Menu that appears when long-pressing the back-button */
+    #backForwardMenu {
+        margin-top: -250px;
+        height: 200px;
+        min-height: 200px;
+    }
 }
