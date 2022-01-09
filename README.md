@@ -17,9 +17,7 @@ This does not replace a proper implementation in
   * Disable search suggestions
   * Disable Firefox studies
   * Disable Telemetry
-  * Set DuckDuckGo as default search engine, remove other search engines except
-    for Wikipedia (only works in Firefox ESR, limitation of
-    [policies.json](https://github.com/mozilla/policy-templates/blob/cab6a5076c1d8e5a1574637709c19b54bdbd669e/README.md#searchengines--remove))
+  * Set DuckDuckGo as default search engine
 * Uncluttering:
   * Disable built-in advertisements (e.g. hardcoded links for certain social
     media sites on the start page)
