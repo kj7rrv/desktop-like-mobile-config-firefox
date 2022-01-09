@@ -22,12 +22,6 @@
         --tab-min-width: calc(100vw - 116px) !important;
     }
 
-    /* Rotate the arrow on the "all tabs" button to point upwards, since the
-     * tabs and searchbar were moved to the bottom. */
-    #alltabs-button {
-        transform: rotate(180deg) !important;
-    }
-
     /* All tabs menu: hide scroll buttons */
     #scrollbutton-up, #scrollbutton-down {
         display: none !important;

@@ -13,14 +13,6 @@
         bottom: 100px;
     }
 
-    /* Now that the navbar is at the bottom, we need to set an offset to have
-     * the notifications (like the one for installing addons) displayed
-     * on-screen. */
-    #notification-popup {
-        margin-left: -200px !important;
-        margin-top: -500px !important;
-    }
-
     #downloadsPanel-mainView {
         max-width: calc(100vw - 10px);
     }
