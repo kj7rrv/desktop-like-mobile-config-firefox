@@ -14,7 +14,6 @@ This does not replace a proper implementation in
 * Enable mobile gestures
 * User agent set to same as Tor Browser for Android
 * Privacy tweaks:
-  * Disable search suggestions
   * Disable Firefox studies
   * Disable Telemetry
   * Set DuckDuckGo as default search engine

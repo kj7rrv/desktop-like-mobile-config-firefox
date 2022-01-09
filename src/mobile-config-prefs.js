@@ -1,4 +1,5 @@
 // Copyright 2021 Oliver Smith, Martijn Braam
+// Copyright 2022 Samuel Sloniker KJ7RRV
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 // Set up autoconfig (we use it to copy/update userChrome.css into profile dir)
@@ -13,9 +14,6 @@ pref('apz.allow_double_tap_zooming', true);
 
 // Save vertical space by drawing directly in the titlebar
 pref('browser.tabs.drawInTitlebar', true);
-
-// Disable search suggestions
-pref('browser.search.suggest.enabled', false);
 
 // Empty new tab page: faster, less distractions
 pref('browser.newtabpage.enabled', false);
